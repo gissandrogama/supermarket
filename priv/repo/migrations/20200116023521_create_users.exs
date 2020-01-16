@@ -7,7 +7,11 @@ defmodule SuperFast.Repo.Migrations.CreateUsers do
       add :last_name, :string
       add :phone, :string
       add :email, :string
+      add :email, :string, null: false
+      add :password_hash, :string
       add :cpf, :integer
+      add :is_active, :boolean, default: false, null: false
+
 
       timestamps()
     end
