@@ -6,8 +6,20 @@ defmodule SuperFast.AccountsTest do
   describe "users" do
     alias SuperFast.Accounts.User
 
-    @valid_attrs %{cpf: 42, email: "some email", fist_name: "some fist_name", last_name: "some last_name", phone: "some phone"}
-    @update_attrs %{cpf: 43, email: "some updated email", fist_name: "some updated fist_name", last_name: "some updated last_name", phone: "some updated phone"}
+    @valid_attrs %{
+      cpf: 42,
+      email: "some email",
+      fist_name: "some fist_name",
+      last_name: "some last_name",
+      phone: "some phone"
+    }
+    @update_attrs %{
+      cpf: 43,
+      email: "some updated email",
+      fist_name: "some updated fist_name",
+      last_name: "some updated last_name",
+      phone: "some updated phone"
+    }
     @invalid_attrs %{cpf: nil, email: nil, fist_name: nil, last_name: nil, phone: nil}
 
     def user_fixture(attrs \\ %{}) do
