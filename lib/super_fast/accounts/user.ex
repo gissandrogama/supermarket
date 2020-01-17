@@ -9,8 +9,7 @@ defmodule SuperFast.Accounts.User do
     field :last_name, :string
     field :phone, :string
     field :password, :string, virtual: true
-    field :password_hash, :string
-    field :is_active, :boolean, default: false
+    field :password_hash, :string    
 
     timestamps()
   end
@@ -18,8 +17,8 @@ defmodule SuperFast.Accounts.User do
   @doc false
   def changeset(user, attrs) do
     user
-    |> cast(attrs, [:fist_name, :last_name, :phone, :email, :cpf, :password, :is_active])
-    |> validate_required([:fist_name, :last_name, :phone, :email, :cpf, :password, :is_active])
+    |> cast(attrs, [:fist_name, :last_name, :phone, :email, :cpf, :password])
+    |> validate_required([:fist_name, :last_name, :phone, :email, :cpf, :password])
     |> put_password_hash()
   end
 
