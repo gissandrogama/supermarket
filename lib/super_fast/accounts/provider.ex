@@ -8,8 +8,7 @@ defmodule SuperFast.Accounts.Provider do
     field :name, :string
     
     has_many :itens, SuperFast.Produtos.Item
-    many_to_many :users, SuperFast.Accounts.User, join_through: "compras"
-
+    
     timestamps()
   end
 

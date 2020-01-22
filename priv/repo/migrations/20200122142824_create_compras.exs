@@ -4,8 +4,8 @@ defmodule SuperFast.Repo.Migrations.CreateCompras do
   def change do
     create table(:compras) do
       add :user_id, references(:users)
-      add :provider_id, references(:providers)
+      add :item_id, references(:itens)
   end
 
-  create unique_index(:compras, [:user_id, :provider_id])
+  create unique_index(:compras, [:user_id, :item_id])
 end
