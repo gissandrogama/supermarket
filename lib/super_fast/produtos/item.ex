@@ -10,6 +10,7 @@ defmodule SuperFast.Produtos.Item do
     field :quantidade, :integer
     field :tipo, :string
     field :validade, :string
+    belongs_to :provider, SuperFast.Accounts.Provider
 
     timestamps()
   end

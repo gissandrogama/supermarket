@@ -10,6 +10,7 @@ defmodule SuperFast.Repo.Migrations.CreateItens do
       add :conteudo, :string
       add :quantidade, :integer
       add :validade, :string
+      add :provider_id, references(:providers)
 
       timestamps()
     end

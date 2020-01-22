@@ -6,6 +6,7 @@ defmodule SuperFast.Accounts.Provider do
     field :address, :string
     field :cnpj, :integer
     field :name, :string
+    has_many :item, SuperFast.Produtos.Item
 
     timestamps()
   end
