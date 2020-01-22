@@ -6,7 +6,9 @@ defmodule SuperFast.Accounts.Provider do
     field :address, :string
     field :cnpj, :integer
     field :name, :string
-    has_many :item, SuperFast.Produtos.Item
+    
+    has_many :itens, SuperFast.Produtos.Item
+    many_to_many :users, SuperFast.Accounts.User, join_through: "compras"
 
     timestamps()
   end

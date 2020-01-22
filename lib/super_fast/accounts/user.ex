@@ -9,7 +9,9 @@ defmodule SuperFast.Accounts.User do
     field :last_name, :string
     field :phone, :string
     field :password, :string, virtual: true
-    field :password_hash, :string    
+    field :password_hash, :string
+    
+    many_to_many :providers, SuperFast.Accounts.Provider, join_through: "compras"    
 
     timestamps()
   end
