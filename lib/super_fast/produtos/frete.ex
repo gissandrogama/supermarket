@@ -6,6 +6,8 @@ defmodule SuperFast.Produtos.Frete do
     field :endereco_provid, :string
     field :endereco_user, :string
     field :valor, :integer
+    
+    has_one :compra, SuperFast.Produtos.Compra
 
     timestamps()
   end

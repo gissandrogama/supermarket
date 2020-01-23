@@ -8,6 +8,7 @@ defmodule SuperFast.Produtos.Compra do
 
     belongs_to :user, SuperFast.Accounts.User
     many_to_many :itens, SuperFast.Produtos.Item, join_through: "compra_itens"
+    belongs_to :frete, SuperFast.Produtos.Frete
 
     timestamps()
   end

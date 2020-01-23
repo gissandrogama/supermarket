@@ -7,6 +7,7 @@ defmodule SuperFast.Repo.Migrations.CreateCompras do
       add :valor_total, :integer
       
       add :user_id, references(:users)
+      add :frete_id, references(:fretes)
 
       timestamps()
     end
