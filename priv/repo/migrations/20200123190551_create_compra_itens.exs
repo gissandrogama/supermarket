@@ -1,8 +1,8 @@
-defmodule SuperFast.Repo.Migrations.CreateCompraFretes do
+defmodule SuperFast.Repo.Migrations.CreateCompraItens do
   use Ecto.Migration
 
   def change do
-    create table(:compra_fretes) do
+    create table(:compra_itens) do
       add :preco_unit, :float
       add :quantidade, :integer
       add :preco_total, :float

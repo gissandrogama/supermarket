@@ -13,7 +13,7 @@ defmodule SuperFast.Produtos.Item do
     field :valor, :integer
     
     belongs_to :provider, SuperFast.Accounts.Provider
-    many_to_many :compras, SuperFast.Produtos.Compra, join_through: "compra_fretes"
+    many_to_many :compras, SuperFast.Produtos.Compra, join_through: "compra_itens"
     
     timestamps()
   end

@@ -7,6 +7,9 @@ defmodule SuperFast.Repo.Migrations.CreateFretes do
       add :endereco_provid, :string
       add :endereco_user, :string
 
+      add :user_id, references(:users)
+      add :contributor_id, references(:contributors)
+
       timestamps()
     end
 
