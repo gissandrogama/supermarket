@@ -6,6 +6,8 @@ defmodule SuperFast.Produtos.Compra do
     field :data_compra, :date
     field :valor_total, :integer
 
+    many_to_many :itens, SuperFast.Produtos.Item, join_through: "compra_fretes"
+
     timestamps()
   end
 
