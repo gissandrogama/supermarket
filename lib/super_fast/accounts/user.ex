@@ -11,7 +11,8 @@ defmodule SuperFast.Accounts.User do
     field :password, :string, virtual: true
     field :password_hash, :string
     
-    has_many :compras, SuperFast.Produtos.Compra        
+    has_many :compras, SuperFast.Produtos.Compra
+    many_to_many :contributors, SuperFast.Accounts.Contributor, join_through: "fretes"        
 
     timestamps()
   end

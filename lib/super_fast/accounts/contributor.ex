@@ -10,6 +10,8 @@ defmodule SuperFast.Accounts.Contributor do
     field :password, :string
     field :phone, :string
 
+    many_to_many :users, SuperFast.Accounts.User, join_through: "fretes"
+
     timestamps()
   end
 
