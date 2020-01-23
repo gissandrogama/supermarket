@@ -10,10 +10,10 @@ defmodule SuperFast.Produtos.Item do
     field :quantidade, :integer
     field :tipo, :string
     field :validade, :string
+    field :valor, :integer
     
     belongs_to :provider, SuperFast.Accounts.Provider
-    many_to_many :users, SuperFast.Accounts.User, join_through: "compras"
-
+    
     timestamps()
   end
 
