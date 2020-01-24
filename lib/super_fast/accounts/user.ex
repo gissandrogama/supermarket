@@ -3,7 +3,7 @@ defmodule SuperFast.Accounts.User do
   import Ecto.Changeset
 
   schema "users" do
-    field :cpf, :integer
+    field :cpf, :string
     field :email, :string
     field :fist_name, :string
     field :last_name, :string

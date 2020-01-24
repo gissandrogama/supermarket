@@ -11,6 +11,6 @@ defmodule SuperFast.Repo.Migrations.CreateCompraItens do
 
       timestamps()
     end
-    create unique_index(:compra_fretes, [:item_id, :compra_id])
+    create unique_index(:compra_itens, [:item_id, :compra_id])
   end
 end
