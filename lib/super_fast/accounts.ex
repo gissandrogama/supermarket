@@ -7,6 +7,8 @@ defmodule SuperFast.Accounts do
   alias SuperFast.Repo
 
   alias SuperFast.Accounts.User
+  alias SuperFast.Accounts.Contributor
+  alias SuperFast.Accounts.Provider
 
   @doc """
   Returns the list of users.
